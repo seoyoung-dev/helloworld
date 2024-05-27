@@ -1,0 +1,275 @@
+:root {
+    --text-color: #263343;
+    --background-color: #f0f4f5;
+    --accent-color: #E4F0D5;
+    --header-color: #497649;
+    --gray-color: #DFDFDF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: var(--gray-color);
+}
+
+body { 
+    margin: 0;
+    color: var(--text-color);
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+p {
+    line-height: 2.1;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_logo > img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.navbar_logo > a {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.navbar_toggle {
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    display: none;
+}
+
+/* section */
+
+section {
+    padding: 0 15px;
+    margin-top: 30px;
+    width: 100%;
+    float: bottom;
+    min-height: calc(100vh - 10rem);
+    padding-bottom: 120px;
+}
+
+.page {
+    width: 650px;
+    margin: 0 auto;
+    overflow: clip;
+}
+
+.section_header {
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--header-color);
+}
+
+/* introduce 페이지 */
+
+.section_introduce_rol1 {
+    display: flex;
+    margin-bottom: 40px;
+    width: 100%
+}
+
+.section_introduce_rol1 > img {
+    border-radius: 50%;
+    width: 250px;
+}
+
+.section_introduce_rol1 > table {
+    margin-left: 40px;
+}
+
+/* project 페이지 */
+
+.project_description {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 12px;
+    background: var(--accent-color);
+}
+
+/* experience 페이지 */
+
+.experience_name {
+    list-style: none
+}
+
+.section_experience_row {
+    display: flex;
+}
+
+.section_experience_row div:first-child {
+    width: 205px;
+    overflow-wrap: break-word;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 1;
+}
+
+.section_experience_row div:first-child p {
+    overflow: hidden;
+}
+
+.section_experience_row li {
+    padding-top: 5px;
+    white-space: wrap;
+}
+
+.section_experience_header {
+    margin: 0;
+}
+
+.what {
+    width: 30%;
+}
+
+.last_row {
+    margin-bottom: 40px;
+}
+
+
+footer {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray-color);
+    color: var(--background-color);
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+        margin: 0;
+    }
+
+    .page {
+        width: 90%;
+        padding-right: 10px;
+    }
+
+    .page p {
+        word-wrap: break-all;
+    }
+    .navbar {   
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #hamburger {
+        width: 30px;
+    }
+
+    .navbar_toggle {
+        display: flex;
+    }
+
+    .navbar_menu.active {
+        display: flex;
+    }
+
+    .section_introduce_rol1 {
+        flex-direction: column;
+    } 
+
+    .section_introduce_rol1 > table {
+        margin-left: 0;
+    }
+
+    .section_introduce_rol1 > img {
+        margin-bottom: 30px;
+        padding-left: 50px;
+    }
+
+    .section_experience_row {
+        flex-direction: column;
+    }
+
+    .project_description {
+        display: flex;
+        width: 90%;
+    
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar_logo img {
+        width: 35px;
+    }
+
+    .navbar_logo a {
+        font-size: 2em;
+    }
+
+    #hamburger {
+        width: 28px;
+    }
+}
